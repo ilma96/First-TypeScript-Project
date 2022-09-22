@@ -1,6 +1,9 @@
-<p>Component Page</p>
-<app-first-component [title]="t1"></app-first-component>
-<app-first-component [title]="t2"></app-first-component>
-<app-first-component [title]="t3"></app-first-component>
-<app-first-component [title]="t4"></app-first-component>
-<app-first-component [title]="t5"></app-first-component>
+<div *ngFor="let items of placeholderForMenu">
+  <app-first-component
+    [productID]="items.productID"
+    [productName]="items.productName"
+    [productCategory]="items.productCategory"
+    [productPrice]="items.productPrice"
+    [productURL]="items.productURL"
+  ></app-first-component>
+</div>

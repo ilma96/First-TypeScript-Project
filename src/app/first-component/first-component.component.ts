@@ -7,16 +7,23 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class FirstComponentComponent implements OnInit {
   @Input()
-  title: String = '';
-  x: number = 0;
+  productID: number = 0;
+  @Input()
+  productName: String = '';
+  @Input()
+  productCategory: String = '';
+  @Input()
+  productPrice: number = 0.0;
+  @Input()
+  productURL: String = '';
+  toCart: boolean = false;
   // inside a class, 'let' or 'var' or 'const', we don't need to type before a variable
   // we are binding this variable to our html
 
   constructor() {}
 
   ngOnInit(): void {}
-
-  increment(): void {
-    this.x = this.x + 1;
+  ShoppingCart(): void {
+    this.toCart = !this.toCart;
   }
 }
